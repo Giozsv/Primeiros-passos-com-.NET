@@ -9,6 +9,39 @@ namespace Conjuntos
     {
         static void Main(string[] args)
         { 
+            
+        ///REDIMENSIONAR ARRAY NOVOTAMANHO
+             System.Console.WriteLine($"Capacidade atual do array: {array.Length}");
+
+             op.RedidmensionarArray(ref array, array.Length * 2);
+            
+            System.Console.WriteLine($"Capacidade atual do array após redimensionar: {array.Length}");
+
+
+            
+        ///ENCONTRAR INDICE DO VALOR
+             int indice = op.ObterIndice(array, valorProcurado);
+
+             if (indice > -1)  //posição invalida
+             {
+                 System.Console.WriteLine("O índice do elemento {0} é: {1}", valorProcurado, indice);            //0 substituido pelo var valorProcurado\\ 1 substituido pela var Indice 
+             }                           //"$"O índice do elemento {valorProcurado} é: {indice}"); --> interpolação de string = concatenar string + var              
+             else
+             {
+                 System.Console.WriteLine("Valor não existe no array");
+             }
+
+
+             int valorAchado = op.ObterValor(array, valorProcurado);
+
+             if (valorAchado > 0)
+             {
+                 System.Console.WriteLine("Encontrei o valor");
+             }
+             else
+             {
+                 System.Console.WriteLine("Não encontrei o valor");
+             }
         ///VERIFICANDO TODOS OS ARRAY
             bool TodosMaiorQue = op.TodosMaiorQue(array, valorProcurado);
 
