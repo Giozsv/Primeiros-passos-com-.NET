@@ -9,6 +9,19 @@ namespace Conjuntos
     {
         static void Main(string[] args)
         { 
+             OperaçoesArray op = new OperaçoesArray();
+
+             int[] array = new int[5] { 6, 3, 8, 1, 9 };                 //metade irá receber valores do arrayCopia
+             int[] arrayCopia = new int[10];                             // sem valor declarado = padrão do valor int 0
+             string[] arrayString = op.ConverterParaArrayString(array);
+            
+             int valorProcurado = 8;
+
+             System.Console.WriteLine($"Capacidade atual do array: {array.Length}");
+
+             op.RedidmensionarArray(ref array, array.Length * 2);
+            
+             System.Console.WriteLine($"Capacidade atual do array após redimensionar: {array.Length}");
             
         ///REDIMENSIONAR ARRAY NOVOTAMANHO
              System.Console.WriteLine($"Capacidade atual do array: {array.Length}");
